@@ -42,12 +42,8 @@ total.innerHTML = alloperation;
 function removeProduct(event) {
   
   const target = event.currentTarget;
-  let allRemove = document.getElementsByTagName('tbody');
-
-  allRemove.removeChild();
-  
-  target.parentNode.parentNode.removeChild();
-  console.log('The target in remove is:', );
+let removeThat = document.querySelector('.product')
+  console.log('The target in remove is:', target.parentNode.parentNode.parentNode.removeChild(removeThat));
   //... your code goes here
 }
 
