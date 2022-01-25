@@ -11,11 +11,7 @@ function updateSubtotal(product) {
   
 console.log('Calculating subtotal, yey!');
 
-console.log(price);
-console.log(quantity.value);
-console.log(subTotal);
-
-return operation;
+  return operation;
   
 }
 
@@ -41,10 +37,17 @@ total.innerHTML = alloperation;
 }
 
 // ITERATION 4
+ 
 
 function removeProduct(event) {
+  
   const target = event.currentTarget;
-  console.log('The target in remove is:', target);
+  let allRemove = document.getElementsByTagName('tbody');
+
+  allRemove.removeChild();
+  
+  target.parentNode.parentNode.removeChild();
+  console.log('The target in remove is:', );
   //... your code goes here
 }
 
@@ -55,6 +58,10 @@ function createProduct() {
 }
 
 window.addEventListener('load', () => {
+  let removeButtons = document.querySelectorAll('.btn-remove');
+  for(let i = 0 ; i <removeButtons.length ; i++){
+    removeButtons[i].addEventListener('click', removeProduct);
+  }
   const calculatePricesBtn = document.getElementById('calculate');
   calculatePricesBtn.addEventListener('click', calculateAll);
 
